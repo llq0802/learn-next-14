@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 import Link from 'next/link';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <Link href="/blog/aaa">
           <b>Blog</b>
         </Link>
+        <Button>ANTD</Button>
       </div>
     </main>
   );

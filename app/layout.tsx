@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
 import Script from 'next/script';
 import Link from 'next/link';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: '首页',
@@ -19,11 +19,7 @@ export default function RootLayout({ children, team }: { children: React.ReactNo
         <br />
         {children}
         {team}
-        <Script
-          strategy="beforeInteractive"
-          async
-          src={'https://www.googletagmanager.com/gtag/js?id=AW-11217955271'}
-        ></Script>
+        <Script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=AW-11217955271" />
       </body>
     </html>
   );
