@@ -1,21 +1,27 @@
 import { NextResponse, NextRequest } from 'next/server';
 
 export async function middleware(request: NextRequest) {
-  console.log('==开始.====>');
-  console.log('==request.====>', request);
-
-  // const isAuthenticated = authenticate(request)
-
-  // // If the user is authenticated, continue as normal
-  // if (isAuthenticated) {
-  //   return NextResponse.next()
+  // console.log('==request.====>', request.url);
+  // const {pathname} = request.nextUrl;
+  // // 重写请求
+  // if (pathname.startsWith('/tk/')) {
+  //     return NextResponse.rewrite(new URL(pathname.replace(/^\/tk/, ''), request.url));
   // }
-
-  // // Redirect to login page if not authenticated
-  // return NextResponse.redirect(new URL('/login', request.url))
-  return NextResponse.next();
+  // 修改请求头
+  // const requestHeaders = new Headers(request.headers);
+  // requestHeaders.set('Language', 'zh');
+  // return NextResponse.next(
+  //     {request: {headers: requestHeaders}}
+  // );
+  // 代理
+  // NextResponse.rewrite(new URL('/proxy', request.url))
+  // return NextResponse.next();
 }
 
 // export const config = {
-//   matcher: '/dashboard/:path*',
+//   matcher: '/;dashboard/:path*',
+// }
+
+// export const config = {
+//   matcher: '*'
 // }

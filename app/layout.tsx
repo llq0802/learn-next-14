@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import Link from 'next/link';
 import './globals.css';
+import { useSelectedLayoutSegment } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: '首页',
