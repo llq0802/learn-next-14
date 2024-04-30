@@ -1,6 +1,8 @@
-import { NextResponse, NextRequest } from 'next/server';
+import { NextResponse, NextRequest, userAgent } from 'next/server';
 
 export async function middleware(request: NextRequest) {
+  // const { device } = userAgent(request);
+  // console.log('==device====>', device);
   // console.log('==request.====>', request.url);
   // const {pathname} = request.nextUrl;
   // // 重写请求

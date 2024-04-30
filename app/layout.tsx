@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import Link from 'next/link';
 import './globals.css';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 export const metadata: Metadata = {
   title: '首页',
@@ -16,10 +16,8 @@ export default function RootLayout({ children, team }: { children: React.ReactNo
         <Link href="/">
           <h1 className=" font-bold text-2xl bg-slate-500">根-Layout</h1>
         </Link>
-        <hr />
-        <br />
-        {children}
-        {team}
+        <AntdRegistry>{children}</AntdRegistry>
+        {/* {team} */}
         <Script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=AW-11217955271" />
       </body>
     </html>
