@@ -27,3 +27,16 @@ export async function middleware(request: NextRequest) {
 // export const config = {
 //   matcher: '*'
 // }
+
+// export const config = {
+//   matcher: [
+//     /*
+//      * 匹配所有的路径除了以这些作为开头的：
+//      * - api (API routes)
+//      * - _next/static (static files)
+//      * - _next/image (image optimization files)
+//      * - favicon.ico (favicon file)
+//      */
+//     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+//   ],
+// }
