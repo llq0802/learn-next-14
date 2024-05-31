@@ -1,22 +1,29 @@
-import { Button } from 'antd';
 import Link from 'next/link';
+import { Button as CNButton } from '@/components/ui/button';
+
+const list = [
+  { title: 'Shadcn-Ui', href: '/shadcnui' },
+  { title: 'Dashboard', href: '/dashboard' },
+  { title: 'Blog:id', href: '/blog/999' },
+  { title: 'About', href: '/about' },
+  { title: 'Template', href: '/template' },
+  { title: 'Sevcer Action', href: '/action' },
+  { title: 'Cache', href: '/cache' },
+];
 
 export default function Home() {
   return (
     <main>
-      <div className="container flex  items-center gap-5 bg-blue-500">
-        <Link href="/dashboard" scroll={false}>
-          <b>Dashboard</b>
-        </Link>
-        <Link href="/dashboard/settings">
-          <b>Dashboard/Settings</b>
-        </Link>
-        <Link href="/blog/aaa">
-          <b>Blog</b>
-        </Link>
-        <Button>ANTD</Button>
+      <div className='container flex  items-center gap-5 '>
+        {list.map((item, i) => (
+          <CNButton key={i} asChild size='sm'>
+            <Link href={item.href}>
+              <b>{item.title}</b>
+            </Link>
+          </CNButton>
+        ))}
       </div>
-      <div className=" bg-amber-500 h-20 w-[200px] ">测试</div>
+      <div className=' bg-amber-500 h-20 w-[200px] rounded-[8px]'>测试 Tailwindcss</div>
     </main>
   );
 }

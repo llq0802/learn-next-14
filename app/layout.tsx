@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import Link from 'next/link';
-import './globals.css';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: '首页',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({ children, team }: { children: React.ReactNode; team: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-green-100 ">
-        <Link href="/">
-          <h1 className=" font-bold text-2xl bg-slate-500">根-Layout</h1>
+    <html lang='zh'>
+      <body className='min-h-screen bg-green-100 '>
+        <Link href='/'>
+          <h1 className=' text-center font-bold text-2xl bg-slate-500 py-2 mb-2'>根-Layout</h1>
         </Link>
         <AntdRegistry>{children}</AntdRegistry>
         {/* {team} */}
-        <Script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=AW-11217955271" />
+        <Script async src='https://www.googletagmanager.com/gtag/js?id=AW-11217955271' />
       </body>
     </html>
   );
