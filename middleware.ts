@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest, userAgent } from 'next/server';
-
+// middleware.js(ts) 文件必须放放在和app目录同级的目录中。
 export async function middleware(request: NextRequest) {
   // const { device } = userAgent(request);
   // console.log('==device====>', device);
@@ -40,3 +40,6 @@ export async function middleware(request: NextRequest) {
 //     '/((?!api|_next/static|_next/image|favicon.ico).*)',
 //   ],
 // }
+// permanentRedirect // 308
+
+// redirect  307

@@ -3,9 +3,10 @@ const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compress: true,
   reactStrictMode: false,
   productionBrowserSourceMaps: false,
-  // distDir: isProd ? 'dist' : '.next',
+  distDir: isProd ? 'dist' : '.next',
   eslint: {
     ignoreDuringBuilds: true, // 忽略在构建时出现的错误
   },
